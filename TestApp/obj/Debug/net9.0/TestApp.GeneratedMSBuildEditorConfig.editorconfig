@@ -1,0 +1,117 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TestApp
+build_property.RootNamespace = TestApp
+build_property.ProjectDir = /Users/rsmith/Projects/TestApp/TestApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/rsmith/Projects/TestApp/TestApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9EZXBhcnRtZW50L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Department/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9EZXBhcnRtZW50L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Department/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9EZXBhcnRtZW50L0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9EZXBhcnRtZW50L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9EZXBhcnRtZW50L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Person/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9QZXJzb24vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Person/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9QZXJzb24vRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Person/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9QZXJzb24vRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Person/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9QZXJzb24vRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Person/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9QZXJzb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Todo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9Ub2RvL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Todo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9Ub2RvL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Todo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9Ub2RvL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Todo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9Ub2RvL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/CRUD_Todo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ1JVRF9Ub2RvL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/rsmith/Projects/TestApp/TestApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-x6dnvwxphs
