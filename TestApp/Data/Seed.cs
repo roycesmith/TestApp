@@ -95,84 +95,84 @@ public class Seed
             {
                 Name = "Year 12 IA1",
                 IsComplete = false,
-                Modified = DateTime.UtcNow.AddDays(7),
+                Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Bill" && p.LastName == "Smith").Id
             },
             new Todo
             {
                 Name = "Year 10 Test",
                 IsComplete = true,
-                Modified = DateTime.UtcNow.AddDays(-7),
+                Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Bill" && p.LastName == "Smith").Id
             },
             new Todo
             {
                 Name = "Year 11 FIA1",
                 IsComplete = false,
-                Modified = DateTime.UtcNow.AddDays(14),
+                Modified = DateTime.Now.AddDays(-14),
                 PersonId = context.Person.First(p => p.FirstName == "Sam" && p.LastName == "Jones").Id
             },
             new Todo
             {
                 Name = "Year 10 Test",
                 IsComplete = true,
-                Modified = DateTime.UtcNow.AddDays(-7),
+                Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Sam" && p.LastName == "Jones").Id
             },
             new Todo
             {
                 Name = "Year 12 IA2",
                 IsComplete = false,
-                Modified = DateTime.UtcNow.AddDays(21),
+                Modified = DateTime.Now.AddDays(-21),
                 PersonId = context.Person.First(p => p.FirstName == "Jane" && p.LastName == "Thompson").Id
             },
             new Todo
             {
                 Name = "Year 10 Test",
                 IsComplete = true,
-                Modified = DateTime.UtcNow.AddDays(-14),
+                Modified = DateTime.Now.AddDays(-14),
                 PersonId = context.Person.First(p => p.FirstName == "Jane" && p.LastName == "Thompson").Id
             },
             new Todo
             {
                 Name = "Year 11 FIA1",
                 IsComplete = false,
-                Modified = DateTime.UtcNow.AddDays(1),
+                Modified = DateTime.Now.AddDays(-1),
                 PersonId = context.Person.First(p => p.FirstName == "Julie" && p.LastName == "Johnstone").Id
             },
             new Todo
             {
                 Name = "Year 10 Test",
                 IsComplete = false,
-                Modified = DateTime.UtcNow.AddDays(-14),
+                Modified = DateTime.Now.AddDays(-14),
                 PersonId = context.Person.First(p => p.FirstName == "Julie" && p.LastName == "Johnstone").Id
             },
             new Todo
             {
                 Name = "Year 11 IA1",
                 IsComplete = false,
-                Modified = DateTime.UtcNow.AddDays(-7),
+                Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Debbie" && p.LastName == "Flintstone").Id
             },
             new Todo
             {
                 Name = "Year 10 Test",
                 IsComplete = true,
-                Modified = DateTime.UtcNow.AddDays(-7),
+                Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Debbie" && p.LastName == "Flintstone").Id
             },
             new Todo
             {
                 Name = "Year 12 IA1",
                 IsComplete = true,
-                Modified = DateTime.UtcNow.AddDays(-14),
+                Modified = DateTime.Now.AddDays(-14),
                 PersonId = context.Person.First(p => p.FirstName == "Rob" && p.LastName == "Robinson").Id
             },
             new Todo
             {
                 Name = "Year 10 Test",
                 IsComplete = true,
-                Modified = DateTime.UtcNow.AddDays(-7),
+                Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Rob" && p.LastName == "Robinson").Id
             }
         );

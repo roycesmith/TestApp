@@ -19,12 +19,13 @@ namespace TestApp.Pages.CRUD_Todo
             _context = context;
         }
 
-        public IList<Todo> Todo { get;set; } = default!;
+        public IList<Todo> Todo { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
             Todo = await _context.Todo
-                .Include(t => t.Person).ToListAsync();
+                .Include(t => t.Person)
+                .ToListAsync();
         }
     }
 }

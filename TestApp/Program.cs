@@ -29,6 +29,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// map apicontoller to /api/todo
+
+app.MapControllers();
+
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();

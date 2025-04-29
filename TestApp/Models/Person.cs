@@ -9,5 +9,7 @@ public class Person
     public string? FirstName { get; set; } = string.Empty;
     public string? LastName { get; set; } = string.Empty;
     public int DepartmentId { get; set; } = 0;
+    public Department? Department { get; set; } = null;
+
     public string FullName => FirstName + " " + LastName;
 }

@@ -361,3 +361,4 @@
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/TestApp.pdb
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/TestApp.genruntimeconfig.cache
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/ref/TestApp.dll
+/Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/TestApp.sourcelink.json

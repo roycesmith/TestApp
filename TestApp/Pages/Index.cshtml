@@ -8,3 +8,43 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<div style="border: 1px solid black; padding: 10px; margin: 10px;">
+    <h2>Test</h2>
+    <p>This is a test page.</p>
+    <p>Current time: @DateTime.Now</p>
+    <p>The Current Todo totals are</p>
+    <p>Todo Count: @Model.Todo.Count()</p>
+    <p>Todo Completed Count: @Model.Todo.Count(t => t.IsComplete)</p>
+</div>
+<div style="border: 1px solid black; padding: 10px; margin: 10px;">
+    <h2>test Api data</h2>
+    <p>This is a test page.</p>
+
+    <p>Todo Count: <span itemid="todoCount">0</span></p>
+    <p>Todo Completed Count: <span itemid="todoCountComplete">0</span></p>
+
+</div>
+@* // javacript that fetches {"value","value2"} from api/todo
+// and updates the span with id todoCount *@
+<script type="text/javascript">
+    async function fetchData() {
+        const response = await fetch('/api/todo');
+        let data = await response.json();
+        // parse data when it is ["12", "6"]
+        if (response.ok) {
+            console.log("Response is ok:", response);
+            console.log("Data:", data);
+            // Assuming the response is in the format ["12","6"]
+            const todoCount = data[0]; // First value
+            const completedCount = data[1]; // Second value 
+            // Update the HTML elements with the fetched data
+            document.querySelector('[itemid="todoCount"]').textContent = todoCount;
+            document.querySelector('[itemid="todoCountComplete"]').textContent = completedCount;
+            setTimeout(fetchData, 1000 * 3); // Fetch data every second
+        } else {
+            console.error("Response is not ok:", response);
+        }
+
+    }
+    fetchData();
+</script>
