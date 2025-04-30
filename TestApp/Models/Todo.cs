@@ -7,11 +7,11 @@ namespace TestApp.Models;
 public class Todo
 {
     private const string V = "PersonId";
-
     [Key]
     public int Id { get; set; }
     public string? Name { get; set; }
     public bool IsComplete { get; set; }
+    public int Outstanding { get; set; } = 0;
     public DateTime Modified { get; set; } = DateTime.UtcNow;
 
     [ForeignKey("PersonId")]

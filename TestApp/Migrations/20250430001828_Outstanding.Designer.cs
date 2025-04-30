@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApp.Data;
 
@@ -10,9 +11,11 @@ using TestApp.Data;
 namespace TestApp.Migrations
 {
     [DbContext(typeof(TestAppContext))]
-    partial class TestAppContextModelSnapshot : ModelSnapshot
+    [Migration("20250430001828_Outstanding")]
+    partial class Outstanding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");

@@ -23,6 +23,9 @@
                 @Html.DisplayNameFor(model => model.Todo[0].Modified)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Todo[0].Outstanding)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Todo[0].Person)
             </th>
             <th></th>
@@ -40,6 +43,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Modified)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Outstanding)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Person.FullName)
