@@ -4,6 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
@@ -24,6 +25,12 @@
     <p>Todo Completed Count: <span itemid="todoCountComplete">0</span></p>
 
 </div>
+<div style="border: 1px solid black; padding: 10px; margin: 10px;">
+    <h2>test Api data summary</h2>
+    <p>This is a test page.</p>
+    <div itemid="summaryInfo"></div>
+
+</div>
 @* // javacript that fetches {"value","value2"} from api/todo
 // and updates the span with id todoCount *@
 <script type="text/javascript">
@@ -40,11 +47,44 @@
             // Update the HTML elements with the fetched data
             document.querySelector('[itemid="todoCount"]').textContent = todoCount;
             document.querySelector('[itemid="todoCountComplete"]').textContent = completedCount;
-            setTimeout(fetchData, 1000 * 3); // Fetch data every second
+            //setTimeout(fetchData, 1000 * 3); // Fetch data every second
         } else {
             console.error("Response is not ok:", response);
         }
 
     }
     fetchData();
+    // fecth summary information using /api/summary and present firstname,lastname and total in a table
+    async function fetchSummary() {
+        const response = await fetch('/api/summary');
+        let data = await response.json();
+
+        if (response.ok) {
+            console.log("Response is ok:", response);
+            console.log("Data:", data);
+            // Assuming the response is in the format {firstName: "John", lastName: "Doe", total: 100}
+            // or [{firstName: "John", lastName: "Doe", total: 100}, {firstName: "Jane", lastName: "Smith", total: 200}]
+            const summaryInfo = data; // First value
+            // Update the HTML elements with the fetched data
+            //add bootstrap table to the div with itemid="summaryInfo"
+            let table = "<table class='table table-striped'><tr><th>First Name</th><th>Last Name</th><th>Total Items</th> <th>Average Days</th><th>Total Days</th></tr>";
+
+            summaryInfo.forEach(item => {
+                table += `<tr><td>${item.firstName}</td>
+                <td>${item.lastName}</td>
+                <td>${item.total}</td>
+                <td>${item.avgOutstanding}</td>
+                <td>${item.sumOutstanding}</td>
+                </tr>`;
+                console.log(item.firstName, item.lastName, item.total);
+            });
+            table += "</table>";
+            document.querySelector('[itemid="summaryInfo"]').innerHTML = table;
+            setTimeout(fetchSummary, 1000 * 3); // Fetch data every second
+        } else {
+            console.error("Response is not ok:", response);
+        }
+
+    }
+    fetchSummary();
 </script>

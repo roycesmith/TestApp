@@ -18,9 +18,19 @@ public class SummaryController : ControllerBase
     // GET: api/summary
     [HttpGet]
     public IActionResult GetSummary()
-    {   // this statement brings back a table with 3 columns using SQL only. We need to load it using a different mechanism
+    {
+        // force a refresh of the outstanding field update on the database
+        string sqlStatementUpdate = @"UPDATE Todo
+                                SET Outstanding = cast(julianday('now')- julianday(Modified) as int)";
+        _context.Database.ExecuteSqlRaw(sqlStatementUpdate);
+
+        // this statement brings back a table with 3 columns using SQL only. We need to load it using a different mechanism
         // such as the DBConnection and then read each record into our Model Summary
-        string sqlStatement = @"SELECT Person.FirstName, Person.LastName, Count(Person.Id) as Total FROM Todo
+        string sqlStatement = @"SELECT Person.FirstName, Person.LastName, 
+                                Count(Person.Id) as Total, 
+                                avg(Outstanding) as avgOutstanding,
+                                sum(Outstanding) as sumOutstanding 
+                                FROM Todo
                                 INNER JOIN Person on Person.Id = Todo.PersonId
                                 INNER JOIN Department on Department.Id= Person.DepartmentId
                                 group by Person.Id";
@@ -39,7 +49,9 @@ public class SummaryController : ControllerBase
                     {
                         FirstName = reader["FirstName"].ToString(),
                         LastName = reader["LastName"].ToString(),
-                        Total = Convert.ToInt32(reader["Total"])
+                        Total = Convert.ToInt32(reader["Total"]),
+                        avgOutstanding = Convert.ToInt32(reader["avgOutstanding"]),
+                        sumOutstanding = Convert.ToInt32(reader["sumOutstanding"])
                     });
                 }
             }

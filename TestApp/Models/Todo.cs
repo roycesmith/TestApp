@@ -11,7 +11,11 @@ public class Todo
     public int Id { get; set; }
     public string? Name { get; set; }
     public bool IsComplete { get; set; }
+    // add data annotations to change name to 'Days outstanding'
+    [Display(Name = "Days Outstanding")]
     public int Outstanding { get; set; } = 0;
+
+    [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = true)]
     public DateTime Modified { get; set; } = DateTime.UtcNow;
 
     [ForeignKey("PersonId")]

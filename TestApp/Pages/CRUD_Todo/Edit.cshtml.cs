@@ -30,13 +30,14 @@ namespace TestApp.Pages.CRUD_Todo
                 return NotFound();
             }
 
-            var todo =  await _context.Todo.FirstOrDefaultAsync(m => m.Id == id);
+            var todo = await _context.Todo.FirstOrDefaultAsync(m => m.Id == id);
             if (todo == null)
             {
                 return NotFound();
             }
             Todo = todo;
-           ViewData["PersonId"] = new SelectList(_context.Person, "Id", "Id");
+            ViewData["PersonId"] = new SelectList(_context.Person, "Id", "FullName");
+
             return Page();
         }
 

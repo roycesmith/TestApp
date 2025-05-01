@@ -282,7 +282,6 @@
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/scopedcss/bundle/TestApp.styles.css
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/scopedcss/projectbundle/TestApp.bundle.scp.css
-/Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/compressed/fpnhc7m4mw-b9sayid5wm.gz
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/compressed/riwoo14mbj-61n19gt1b8.gz
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/compressed/d1rf9coecr-xtxxf3hu2r.gz
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/compressed/8vinsm7mre-bqjiyaj88i.gz
@@ -362,3 +361,4 @@
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/TestApp.genruntimeconfig.cache
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/ref/TestApp.dll
 /Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/TestApp.sourcelink.json
+/Users/rsmith/Projects/TestApp/TestApp/obj/Debug/net9.0/compressed/fpnhc7m4mw-e1cv423kfq.gz
