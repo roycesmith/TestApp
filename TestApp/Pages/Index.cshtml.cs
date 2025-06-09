@@ -20,5 +20,11 @@ public class IndexModel : PageModel
     public void OnGet()
     {
         Todo = _context.Todo.ToList();
+        if (_context.Todo.Count() == 0)
+        {
+            // Seed the database with initial data
+            Seed.Initialize(_context);
+            Todo = _context.Todo.ToList();
+        }
     }
 }

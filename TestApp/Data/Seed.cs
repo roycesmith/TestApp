@@ -100,11 +100,18 @@ public class Seed
             },
             new Todo
             {
-                Name = "Year 10 Test",
+                Name = "Year 11 Test",
                 IsComplete = true,
                 Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Bill" && p.LastName == "Smith").Id
             },
+             new Todo
+             {
+                 Name = "Year 10 Test",
+                 IsComplete = true,
+                 Modified = DateTime.Now.AddDays(-7),
+                 PersonId = context.Person.First(p => p.FirstName == "Bill" && p.LastName == "Smith").Id
+             },
             new Todo
             {
                 Name = "Year 11 FIA1",
@@ -154,13 +161,7 @@ public class Seed
                 Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Debbie" && p.LastName == "Flintstone").Id
             },
-            new Todo
-            {
-                Name = "Year 10 Test",
-                IsComplete = true,
-                Modified = DateTime.Now.AddDays(-7),
-                PersonId = context.Person.First(p => p.FirstName == "Debbie" && p.LastName == "Flintstone").Id
-            },
+
             new Todo
             {
                 Name = "Year 12 IA1",
@@ -171,6 +172,13 @@ public class Seed
             new Todo
             {
                 Name = "Year 10 Test",
+                IsComplete = true,
+                Modified = DateTime.Now.AddDays(-7),
+                PersonId = context.Person.First(p => p.FirstName == "Rob" && p.LastName == "Robinson").Id
+            },
+            new Todo
+            {
+                Name = "Year 10 Test 2",
                 IsComplete = true,
                 Modified = DateTime.Now.AddDays(-7),
                 PersonId = context.Person.First(p => p.FirstName == "Rob" && p.LastName == "Robinson").Id

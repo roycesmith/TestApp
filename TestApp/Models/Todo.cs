@@ -6,7 +6,6 @@ namespace TestApp.Models;
 
 public class Todo
 {
-    private const string V = "PersonId";
     [Key]
     public int Id { get; set; }
     public string? Name { get; set; }

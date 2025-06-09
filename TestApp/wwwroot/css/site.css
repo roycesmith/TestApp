@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 @media (min-width: 768px) {
@@ -30,5 +30,9 @@ body {
   text-align: start;
 }
 
+#divOne{
+  text-align: center;
+  color: #0b74e5;
+}
 
 

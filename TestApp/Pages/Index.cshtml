@@ -9,7 +9,20 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-<div style="border: 1px solid black; padding: 10px; margin: 10px;">
+<!-- Add Chart.js and Bootstrap CSS, and a canvas for charts -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container my-4">
+    <h2>Todo Chart</h2>
+    <canvas id="todoChart" width="400" height="200"></canvas>
+</div>
+<div class="container my-4">
+    <h2>Todo Chart Pie</h2>
+    <canvas id="todoChartPie" width="400" height="400"></canvas>
+</div>
+
+<div id="divOne" style="border: 1px solid black; padding: 10px; margin: 10px;">
     <h2>Test</h2>
     <p>This is a test page.</p>
     <p>Current time: @DateTime.Now</p>
@@ -81,9 +94,74 @@
             table += "</table>";
             document.querySelector('[itemid="summaryInfo"]').innerHTML = table;
             setTimeout(fetchSummary, 1000 * 3); // Fetch data every second
+            // at this point we can also update the chart with the data
+
+            const ctx = document.getElementById('todoChart').getContext('2d');
+            const todoChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: summaryInfo.map(item => `${item.firstName} ${item.lastName}`),
+                    datasets: [{
+                        label: 'Total Items',
+                        data: summaryInfo.map(item => item.total),
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            const ctxPie = document.getElementById('todoChartPie').getContext('2d');
+            const todoChartPie = new Chart(ctxPie, {
+                type: 'pie',
+                data: {
+                    labels: summaryInfo.map(item => `${item.firstName} ${item.lastName}`),
+                    datasets: [{
+                        label: 'Total Items',
+                        data: summaryInfo.map(item => item.total),
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Todo Chart Pie'
+                        }
+                    }
+                }
+            });
+
         } else {
             console.error("Response is not ok:", response);
         }
+
 
     }
     fetchSummary();

@@ -32,7 +32,7 @@ public class TodoController : ControllerBase
         // find all the todo and include person
         var todo = _context.Todo
             .Include(t => t.Person)
-            .Include(t => t.Person.Department)
+            .ThenInclude(person => person != null ? person.Department : null)
 
             .FirstOrDefault(t => t.Id == id);
 
